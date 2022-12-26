@@ -1,38 +1,283 @@
 .App {
-  text-align: center;
+    text-align: center;
+    /*margin-left: -10px;*/
+    margin-top: -5px;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
+    width: 60vmin;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        width: 500px;
+        height: 300px
+    }
+
+    .App-logo-school {
+        width: 500px;
+        height: 300px;
+        margin-left: -90px;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #E7E9EF;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.flex_row {
+    display: flex !important;
+    flex-direction: row !important;
+    flex: 1;
+    margin: 0px auto
+}
+
+.card1 {
+    margin-left: 20px;
+}
+
+.shake {
+    animation: shake 5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    transform: translate3d(0, 0, 0);
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+.card2 {
+    margin-top: 100px;
+    margin-left: 100px;
+    font-family: "Apple Braille";
+    font-size: 60px;
+    color: #252424;
+    font-style: italic;
+}
+
+.card3 {
+    margin-top: 100px;
+    width: 800px;
+    font-family: "Apple Braille";
+    font-size: 30px;
+    color: #252424;
+    font-style: italic;
+    positiom: left
+}
+
+.card4 {
+    margin-right: 0px;
+    margin-left: 100px;
+}
+
+.shake4 {
+    animation: shake4 5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    transform: translate3d(0, 0, 0);
+}
+
+@keyframes shake4 {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+.box {
+    width: 100%;
+    height: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    color: #252424;
+    opacity: 0.3;
+}
+
+.intro {
+    font-family: "Apple Braille";
+    font-size: 30px;
+    color: #252424;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box-content {
+    background: #33a579;
+    margin-top: 20px;
+    color: #252424;
+    font-size: 3vmin;
+    font-weight: 700;
+    border-radius: 1vmin;
+    cursor: default;
+}
+
+/*content-动态样式*/
+.box-content-color {
+    color: gold;
+}
+
+.show_box {
+    width: 100%;
+    height: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    color: #252424;
+}
+
+.box_static {
+    width: 300px;
+    height: 180px;
+    margin-left: 10px;
+    opacity: 0.2;
+}
+
+.card_box {
+    width: 300px;
+    height: 180px;
+    margin-left: 10px;
+    animation: card_box 0.5s;
+}
+
+@keyframes card_box {
+    from {
+        transform: rotate(90deg);
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+.img {
+    opacity: 0;
+}
+
+.card {
+    color: #252424;
+    margin-top: 60px;
+    margin-left: 30px;
+}
+
+.passage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    ustify-content: flex-end;
+    height: 50px;
+    color: #252424;
+    text-align: justify;
+    margin: 40px auto;
+}
+
+.hidden {
+    opacity: 0.3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    ustify-content: flex-end;
+    color: #252424;
+    text-align: justify;
+    margin: 40px auto;
+    height: 50px
+}
+
+.card_box_com {
+    width: 210px;
+    height: 180px;
+    animation: card_box_com 2s;
+    margin-left: 90px;
+}
+
+@keyframes card_box_com {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.card_box_com_hidden {
+    width: 210px;
+    height: 180px;
+    margin-left: 180px;
+    opacity: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#chart-container {
+    margin: 40px auto;
+    height: 100vh;
+    overflow: hidden;
+    width: 100vh
+}
+
+.hidden_word_show {
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    color: #252424;
+    opacity: 1;
+}
+
+.hidden_word {
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    color: #252424;
+    opacity: 0;
 }
