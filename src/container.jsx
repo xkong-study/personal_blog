@@ -2,7 +2,6 @@ import './App.css';
 import {useState, useEffect} from "react";
 import Table from "./Table"
 import React from "react";
-
 export default function Container() {
     const [state1, setState1] = useState('shake')
     const [state, setState] = useState('box')
@@ -47,14 +46,14 @@ export default function Container() {
         } else if (document.documentElement.scrollTop > 530 && document.documentElement.scrollTop < 640) {
             setState('show_box')
             setState4('card4')
-            setState1('card1')
+            setState1('card0')
             setState_card('card_box')
-        } else if (document.documentElement.scrollTop > 640) {
+        } else if (document.documentElement.scrollTop > 700) {
             let p_opacity3 = document.querySelectorAll('p')[7];
             setState('box')
             setState4('card4')
-            setState1('card1')
-            setState_card('box_static')
+            setState1('card0')
+            setState_card('card_box')
 
         }
         ;
@@ -75,10 +74,10 @@ export default function Container() {
                             <p>Hi interviewers!</p>
                         </div>
                     </div>
-                    <div className="flex_row">
+                    <div className="flex_row" style={{height: "200px"}}>
                         <div className="card3">
                             <p>My name is Xiangrui Kong</p>
-                            <p>English name is Kelley</p>
+                            <p style={{marginTop:"50px"}}>English name is Kelley</p>
                         </div>
                         <div className={state4}>
                             <img src="https://s1.ax1x.com/2022/12/23/zjHX2q.jpg" className="App-logo-school" alt="logo"
@@ -87,6 +86,7 @@ export default function Container() {
                     </div>
                     <p className={state}>In the university, I tried to learn a lot of things from the front end to the
                         back end, etc.</p>
+                    <p className={state} style={{marginTop:"50px"}}>like angular, react, node.js, springboot.</p>
                     <Table myProp={state_card}/>
                 </header>
             </div>

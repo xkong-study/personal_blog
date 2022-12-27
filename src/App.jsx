@@ -6,7 +6,8 @@ import Table from './Table.jsx'
 import classnames from "classnames";
 import {useEffect, useState} from "react";
 import Map_ from "./relation.jsx"
-
+import Footer from "./footer"
+// import {Counter} from 'counter/Counter';
 export default function App() {
     return (
         <div className="App">
@@ -14,7 +15,10 @@ export default function App() {
                 <div className="intro">
                     <Container/>
                     <Map_/>
+                    {/*<DetailSwitchDemo/>*/}
+                    {/*<Counter/>*/}
                 </div>
+                <Footer title/>
             </header>
         </div>
     );

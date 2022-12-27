@@ -3,7 +3,8 @@ import * as echarts from 'echarts'
 import $ from "jquery"
 import React from "react";
 import file_kong from "./xkong_skill.json"
-import {useState, useEffect} from "react";
+import {useState, useEffect,useRef} from "react";
+import Card from "./Card";
 
 export default function Map_() {
     let [main, setMain] = useState('')
@@ -21,13 +22,12 @@ export default function Map_() {
         ],
         series: [
             {
-                name: 'Les Miserables',
                 type: 'graph',
                 layout: 'none',
                 data: graph.nodes,
                 links: graph.links,
                 categories: graph.categories,
-                roam: true,
+                // roam: true,
                 label: {
                     show: true,
                     position: 'right',
@@ -55,11 +55,17 @@ export default function Map_() {
         var myChart = echarts.init(main);
         myChart.setOption(option);
     }
+
     return (
         <div>
             <div>
                 <header className="App-header">
-                    <div id="chart-container"></div>
+                    <div className="card5">
+                    <div className="box1 digit red"><div id="chart-container"></div></div>
+                    </div>
+                    <div style={{marginLeft:"300px",marginTop:"100px"}}>
+                        <Card/>
+                    </div>
                 </header>
             </div>
         </div>
